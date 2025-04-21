@@ -1,0 +1,63 @@
+openapi: 3.0.0
+info:
+  title: Google Search Agent API
+  version: 1.0.0
+  description: API endpoint to interact with the Google Agent DEvelopment Kit (ADK) to fetch real-time information from the Agent.
+servers:
+  - url: 'https://0bc3-2401-4900-1f29-5efb-c407-4c7e-216b-cfe2.ngrok-free.app'
+    description: Development server
+
+paths:
+  /ask:
+    post:
+      summary: Answers any real time information required from google search engine.
+      description: Sends a query to the real time info agent and receives its response.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/QueryRequest'
+      responses:
+        '200':
+          description: Successful response from the agent.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AgentResponse'
+        '500':
+          description: Internal Server Error.  An error occurred while processing the request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    QueryRequest:
+      type: object
+      required:
+        - query
+      properties:
+        query:
+          type: string
+          description: The user's question..
+          example: "What is the weather like in London?" # Example for the user
+
+    AgentResponse:
+      type: object
+      required:
+        - response
+      properties:
+        response:
+          type: string
+          description: The real-time_answer agent's response to the user's query.
+          example: "It's cloudy in London with a temperature of 15°C."
+
+    ErrorResponse:
+      type: object
+      properties:
+        detail:
+          type: string
+          description: A detailed error message.
+          example: "Internal Server Error: An error occurred during agent execution."

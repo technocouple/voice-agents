@@ -1,0 +1,46 @@
+{
+  "name": "6424d420-cabf-45c8-a153-2b33562e93a5",
+  "displayName": "RAG_SEARCH",
+  "description": "Frequently Asked Questions very specific to the Hair salon shop - Natural Beauty.",
+  "dataStoreSpec": {
+    "dataStoreConnections": [ {
+      "dataStoreType": "UNSTRUCTURED",
+      "dataStore": "projects/227705574464/locations/global/collections/default_collection/dataStores/hair-salon_1745258444275",
+      "documentProcessingMode": "DOCUMENTS",
+      "engineType": "CHAT_ENGINE",
+      "connectorConfig": {
+      
+      },
+      "createTime": {
+        "seconds": 1745258453,
+        "nanos": 610870000
+      },
+      "displayName": "Hair Salon ",
+      "dialogflowAddTime": {
+        "seconds": 1745258477,
+        "nanos": 947000000
+      }
+    } ],
+    "models": {
+      "summarizationModel": {
+      
+      },
+      "rewriterModel": {
+      
+      }
+    },
+    "fallbackPrompt": {
+      "company": "Hair Salon"
+    },
+    "groundingSettings": {
+    
+    },
+    "payloadSettings": {
+    
+    },
+    "voiceModeSettings": {
+    
+    }
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

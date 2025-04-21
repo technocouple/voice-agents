@@ -1,0 +1,9 @@
+{
+  "name": "ee9ac527-5211-4923-a7f3-bf773ab24278",
+  "displayName": "GOOGLE_SEARCH",
+  "description": "Get real time data for user's query from Google Search through Google ADK.",
+  "openApiSpec": {
+    "ignoreUnknownFields": true
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}
